@@ -3,7 +3,7 @@ public class TicketFactory {
         Class classe = null;
         Object objeto = null;
         try{
-            classe = Class.forName(tipo);
+            classe = Class.forName("Ticket" + tipo);
             objeto = classe.getDeclaredConstructor().newInstance();
         } catch (Exception e){
             throw  new IllegalArgumentException("Tipo de Ticket Inexistente");
